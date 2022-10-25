@@ -19,11 +19,6 @@ const templateHTML = require('./src/templateHTML');
 // Create an empty array of team members
 const teamMembers = [];
 
-// Function that starts the application
-function startApp() {
-    addManager();
-}
-
 // Get manager data inputs
 function addManager() {
     inquirer
@@ -156,7 +151,7 @@ function addIntern() {
         });
 }
 
-function createFile() {
+function createTeamFile() {
     if (!fs.existsSync(DIST_DIR)) {
         fs.mkdirSync(DIST_DIR);
     } else {
@@ -164,3 +159,10 @@ function createFile() {
         console.log('HTML file created in the dist folder');
     }
 }
+
+// Function that starts the application
+function startApp() {
+    addManager();
+}
+
+startApp();
