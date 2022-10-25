@@ -6,13 +6,13 @@ const Intern = require('../lib/Intern');
 /* -------------------------------------------------------------------------- */
 
 // Test object instantiation
-test('A new intern can be created', () => {
+test('A new intern object can be created', () => {
     const employeeObject = new Intern();
     expect(typeof employeeObject).toBe('object');
 });
 
 // Test to see if a school property has been added to the Intern object
-test('Can create school.', () => {
+test('A school can be added to the school property of the Intern object', () => {
     const testSchool = 'University of Birmingham';
     const employeeInstance = new Intern(
         'George Fincher',
@@ -42,7 +42,7 @@ test('Intern has been added as the value for the property of role', () => {
 /* -------------------------------------------------------------------------- */
 
 // Test to see if getSchool() method works
-test('Testing officeNumber will return office number.', () => {
+test('school is retrieved through the getSchool() method', () => {
     const testSchool = 'University of Birmingham';
     const employeeInstance = new Intern(
         'George Fincher',

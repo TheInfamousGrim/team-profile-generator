@@ -6,13 +6,13 @@ const Engineer = require('../lib/Engineer');
 /* -------------------------------------------------------------------------- */
 
 // Test object instantiation
-test('A new engineer can be created', () => {
+test('A new engineer object can be created', () => {
     const employeeObject = new Engineer();
     expect(typeof employeeObject).toBe('object');
 });
 
 // Test to see if a gitHub property has been created
-test('A GitHub username can be added to the Engineer obj', () => {
+test('A GitHub username can be added to the Engineer object', () => {
     const github = 'TheInfamousGrim';
     const employeeInstance = new Engineer(
         'George Fincher',

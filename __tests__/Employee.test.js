@@ -6,7 +6,7 @@ const Employee = require('../lib/Employee');
 /* -------------------------------------------------------------------------- */
 
 // Test object instantiation
-test('A new employee can be created', () => {
+test('A new employee object can be created', () => {
     const employeeObject = new Employee();
     expect(typeof employeeObject).toBe('object');
 });
