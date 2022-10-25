@@ -19,7 +19,36 @@ const templateHTML = require('./src/templateHTML');
 // Create an empty array of team members
 const teamMembers = [];
 
-// Get manager data inputs
+/* -------------------------------------------------------------------------- */
+/*                              Add Team Members                              */
+/* -------------------------------------------------------------------------- */
+
+function addTeamMember() {
+    inquirer
+        .prompt([
+            {
+                type: 'list',
+                name: 'what_team_member',
+                message: 'Add an engineer, Add an intern or finish assembling your team?',
+                choices: ['Engineer', 'Intern', 'Assemble Team!'],
+            },
+        ])
+        .then((val) => {
+            if (val.what_team_member === 'Engineer') {
+                addEngineer();
+            } else if (val.what_team_member === 'Intern') {
+                addIntern();
+            } else {
+                createTeamFile();
+            }
+        });
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           Employee Types Creation                          */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------- Get manager data inputs ------------------------ */
 function addManager() {
     inquirer
         .prompt([
@@ -53,30 +82,11 @@ function addManager() {
             const manager = new Manager(val.name, val.id, val.email, val.imgSrc, val.officeNumber);
             console.table(manager);
             teamMembers.push(manager);
+            addTeamMember();
         });
 }
 
-function addTeamMember() {
-    inquirer
-        .prompt([
-            {
-                type: 'list',
-                name: 'what_team_member',
-                message: 'Add an engineer, Add an intern or finish assembling your team?',
-                choices: ['Engineer', 'Intern', 'Assemble Team!'],
-            },
-        ])
-        .then((val) => {
-            if (val.what_team_member === 'Engineer') {
-                addEngineer();
-            } else if (val.what_team_member === 'Intern') {
-                addIntern();
-            } else {
-                createTeamFile();
-            }
-        });
-}
-
+/* ------------------------ Get engineer data inputs ------------------------ */
 function addEngineer() {
     inquirer
         .prompt([
@@ -107,20 +117,21 @@ function addEngineer() {
             },
         ])
         .then((val) => {
-            const engineer = new Engineer(val.name, val.id, val.email, val.gitHub);
+            const engineer = new Engineer(val.name, val.id, val.email, val.imgSrc, val.gitHub);
             console.table(engineer);
             teamMembers.push(engineer);
             addTeamMember();
         });
 }
 
+/* ------------------------- Get intern data inputs ------------------------- */
 function addIntern() {
     inquirer
         .prompt([
             {
                 type: 'input',
                 name: 'name',
-                message: `What is the eIntern's name`,
+                message: `What is the Intern's name`,
             },
             {
                 type: 'input',
@@ -151,6 +162,9 @@ function addIntern() {
         });
 }
 
+/* -------------------------------------------------------------------------- */
+/*                            Create the html file                            */
+/* -------------------------------------------------------------------------- */
 function createTeamFile() {
     if (!fs.existsSync(DIST_DIR)) {
         fs.mkdirSync(DIST_DIR);
@@ -160,7 +174,10 @@ function createTeamFile() {
     }
 }
 
-// Function that starts the application
+/* -------------------------------------------------------------------------- */
+/*                            Start the application                           */
+/* -------------------------------------------------------------------------- */
+
 function startApp() {
     addManager();
 }
