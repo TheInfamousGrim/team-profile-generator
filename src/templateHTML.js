@@ -36,8 +36,8 @@ const renderTeam = (team) => {
                             </li>
                             <li class="list-group-item">
                                 GitHub:
-                                <a href="${engineer.getGitHub}" target="_blank"
-                                    rel="noopener noreferrer">${engineer.getName}</a>
+                                <a href="https://github.com${engineer.getGitHub}" target="_blank"
+                                    rel="noopener noreferrer">${engineer.getGitHub}</a>
                             </li>
                         </ul>
                     </div>
