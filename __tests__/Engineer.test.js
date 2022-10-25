@@ -1,3 +1,4 @@
+// Import 
 const Engineer = require('../lib/Engineer');
 
 /* -------------------------------------------------------------------------- */
@@ -11,7 +12,7 @@ test('A new engineer can be created', () => {
 });
 
 // Test to see if a gitHub property has been created
-test('Can create a github', () => {
+test('A GitHub username can be added to the Engineer obj', () => {
     const github = 'TheInfamousGrim';
     const employeeInstance = new Engineer(
         'George Fincher',
@@ -24,7 +25,7 @@ test('Can create a github', () => {
 });
 
 // Test to see if the property role has the value Engineer
-test('Testing role', () => {
+test('Employee has been added as the value for the property of role', () => {
     const returnValue = 'Engineer';
     const employeeInstance = new Engineer(
         'George Fincher',
@@ -41,7 +42,7 @@ test('Testing role', () => {
 /* -------------------------------------------------------------------------- */
 
 // Test to see if getGitHub() method works
-test('Testing getGithub will return github', () => {
+test('GitHub username is retrieved through the getGitHub() method', () => {
     const testGithub = 'TheInfamousGrim';
     const employeeInstance = new Engineer(
         'George Fincher',
