@@ -57,13 +57,7 @@ Other things I learned:
 
 ## Screenshots
 
-### Homepage Screenshot
-
-![Note Taker Homepage Screenshot](./README-assets/note-taker-heroku-homepage-screenshot.png)
-
-## Notes Page Screenshot
-
-![Note Taker Notes Page Screenshot](./README-assets/note-taker-heroku-notes-page-screenshot.png)
+![Team Profile Rendered Output Screenshot](./assets/README_imgs/screenshot-team-profile-html.png)
 
 ## Installation
 
