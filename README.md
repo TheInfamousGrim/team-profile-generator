@@ -12,13 +12,14 @@ a Node.js command-line application that takes in information about employees on 
 2. [Screenshot](#screenshots)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Technology](#technology)
-6. [Features](#features)
-7. [Credits](#credits)
-8. [License](#license)
-9. [Contribution Guidelines](#contribution-guidelines)
-10. [Feedback](#feedback)
-11. [Socials](#socials)
+5. [Video Walk Through](#video-walk-through)
+6. [Technology](#technology)
+7. [Features](#features)
+8. [Credits](#credits)
+9. [License](#license)
+10. [Contribution Guidelines](#contribution-guidelines)
+11. [Feedback](#feedback)
+12. [Socials](#socials)
 
 ## Description
 
@@ -86,6 +87,10 @@ Please follow these steps to use the application
 1. Run the following script from your terminal
 
    - `npm run start`
+
+## Video Walk Through
+
+[Video Link](https://youtu.be/ZCNmQvhZBco)
 
 ## Technology
 
